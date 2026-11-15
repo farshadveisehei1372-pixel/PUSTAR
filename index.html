@@ -867,12 +867,13 @@ footer{margin-top:76px;padding:30px 26px;border:1px solid #b58a3b66;border-radiu
     cb.addEventListener('click',function(){copyText(txt,cn)});
     function lnk(t,href,ext){var a=document.createElement('a');a.className='btn small';a.textContent=t;a.href=href;if(ext){a.target='_blank';a.rel='noopener'}return a}
     row.appendChild(cb);
+    row.appendChild(lnk('ارسال سفارش در واتساپ','https://wa.me/989107478599?text='+encodeURIComponent(txt),true));
     row.appendChild(lnk('ارسال پیامک','sms:+989107478599?&body='+encodeURIComponent(txt)));
     row.appendChild(lnk('تلگرام','https://t.me/farshadveisehei',true));
     row.appendChild(lnk('اینستاگرام','https://www.instagram.com/farshadveisehei/',true));
     row.appendChild(lnk('تماس','tel:+989107478599'));
     box.appendChild(h);box.appendChild(p);
-    if(artFile){var ap=document.createElement('p');ap.textContent='فایل طرح چاپ را هم در همان پیام (تلگرام یا اینستاگرام) بفرستید.';box.appendChild(ap)}
+    if(artFile){var ap=document.createElement('p');ap.textContent='فایل طرح چاپ را هم در همان گفتگوی واتساپ به‌صورت دستی پیوست کنید.';box.appendChild(ap)}
     box.appendChild(pre);box.appendChild(row);box.appendChild(cn);
     res.appendChild(box);box.scrollIntoView({block:'nearest',behavior:'smooth'});
     btn.disabled=false;
@@ -1229,5 +1230,12 @@ if(wanted)start();ui();
 })();
 </script>
 
+
+<style>
+.pustar-wa-float{position:fixed;left:18px;bottom:18px;z-index:9998;display:inline-flex;align-items:center;gap:9px;padding:12px 17px;border-radius:999px;background:#167a4a;color:#fff;text-decoration:none;font:700 14px Vazirmatn, sans-serif;box-shadow:0 8px 28px #0005;border:1px solid #ffffff33}
+.pustar-wa-float:hover{background:#11663d;transform:translateY(-1px)}
+@media(max-width:520px){.pustar-wa-float{left:12px;bottom:12px;padding:11px 14px;font-size:13px}}
+</style>
+<a class="pustar-wa-float" href="https://wa.me/989107478599?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%AF%D8%B1%DB%8C%D8%A7%D9%81%D8%AA%20%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C%DB%8C%20%D9%88%20%D9%85%D8%B4%D8%A7%D9%88%D8%B1%D9%87%20%D8%A8%D8%A7%20PUSTARCO%20%D9%BE%DB%8C%D8%A7%D9%85%20%D9%85%DB%8C%E2%80%8C%D8%AF%D9%87%D9%85." target="_blank" rel="noopener" aria-label="گفتگو با PUSTARCO در واتساپ">واتساپ PUSTARCO</a>
 </body>
 </html>
